@@ -2,11 +2,12 @@ import React from "react";
 import Product from "./Product";
 
 const Products = ({ products }) => {
+  const item = products.map((product) => {
+    return product
+  })
   return (
     <>
-      {products.map((product) => (
-        <Product product={product} key={Math.random()}/>
-      ))}
+      <Product product={item} key={Math.random()}/>
     </>
   );
 };
